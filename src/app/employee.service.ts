@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Employee } from './employee';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Employee } from './employee';
 })
 
 export class EmployeeService{
-private apiServerUrl = 'environment.apiBaseURl';
+private apiServerUrl = environment.apiBaseURl;
 
 constructor(private http: HttpClient){}
 
